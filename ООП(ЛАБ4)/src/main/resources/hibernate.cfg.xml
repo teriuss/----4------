@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/27_tables?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">12345</property>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="com.example.tables.models.AirTicket"/>
+        <mapping class="com.example.tables.models.ClassOfAirTickets"/>
+        <mapping class="com.example.tables.models.Client"/>
+        <mapping class="com.example.tables.models.Contract"/>
+        <mapping class="com.example.tables.models.Country"/>
+        <mapping class="com.example.tables.models.Events"/>
+        <mapping class="com.example.tables.models.EventTickets"/>
+        <mapping class="com.example.tables.models.Hotel"/>
+        <mapping class="com.example.tables.models.HotelClass"/>
+        <mapping class="com.example.tables.models.HotelRooms"/>
+        <mapping class="com.example.tables.models.Order"/>
+        <mapping class="com.example.tables.models.Post"/>
+        <mapping class="com.example.tables.models.RoomCategory"/>
+        <mapping class="com.example.tables.models.Staff"/>
+        <mapping class="com.example.tables.models.Tour"/>
+        <mapping class="com.example.tables.models.TourFlights"/>
+        <mapping class="com.example.tables.models.Tourist"/>
+        <mapping class="com.example.tables.models.TourProgram"/>
+        <mapping class="com.example.tables.models.TourTasks"/>
+        <mapping class="com.example.tables.models.TravelPackage"/>
+        <mapping class="com.example.tables.models.TypeOfTour"/>
+
+
+    </session-factory>
+</hibernate-configuration>
